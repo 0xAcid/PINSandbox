@@ -58,15 +58,13 @@ def main():
     except IOError as e:
         parser.error(e)
         return False
-	
-	
-    if FileEntropy(args.target) > 7.5:
-        print(green("We detected high entropy on the file. Trying to unpack.\n"))
-        args.PIN = True
-    else:
-        print(FileEntropy(args.target), args.target)
-	exit()
-	
+	print(args.target)
+    if args.target:
+        if FileEntropy(args.target) > 7.5:
+            print(green("We detected high entropy on the file. Trying to unpack.\n"))
+            args.PIN = True
+        else:
+            print(FileEntropy(args.target), args.target)
 	# Add PINDemonium as an option	
     if args.PIN:
         args.package= 'exePIN'

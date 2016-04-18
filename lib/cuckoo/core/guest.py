@@ -88,7 +88,6 @@ class OldGuestManager(object):
         """
         zip_data = StringIO()
         zip_file = ZipFile(zip_data, "w", ZIP_STORED)
-        log.info("\n\n\n\033[91m ------- UPLOADING ANALYZER ------- \033[0m\n\n\n")
         log.info(self.platform)
         # Select the proper analyzer's folder according to the operating
         # system associated with the current machine.
@@ -151,7 +150,6 @@ class OldGuestManager(object):
             # availability of the agent and verify that it's ready to receive
             # data.
             self.wait(CUCKOO_GUEST_INIT)
-            log.info("\n\n\n\033[91m ------- OLD MANAGER ------- \033[0m\n\n\n")
             # Invoke the upload of the analyzer to the guest.
             self.upload_analyzer(monitor)
 
@@ -387,9 +385,6 @@ class GuestManager(object):
             #          "Machines with the new Agent, but for now falling back "
             #          "to backwards compatibility with the old agent.")
             self.is_old = True
-            log.info("\n\n\n\033[91m -------")
-            log.info(monitor, options)
-            log.info(" ------- \033[0m\n\n\n")
             self.old.start_analysis(options, monitor)
             return
         if r.status_code != 200:

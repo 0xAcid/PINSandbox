@@ -16,15 +16,29 @@ You can find a full documentation of the latest stable release [here](http://doc
 
 [![Build Status](https://travis-ci.org/cuckoosandbox/cuckoo.png?branch=master)](https://travis-ci.org/cuckoosandbox/cuckoo)
 # PINSandbox
+PINSandbox is a Cuckoo Sandbox mod which integrates [PINDemonium](https://github.com/Seba0691/PINdemonium).
 
 ## Dependencies
  * PINSandbox is using VirtualBox only (no specific version)
 
-PINSandbox is a Cuckoo Sandbox mod which integrates [PINDemonium](https://github.com/Seba0691/PINdemonium).
 1. Clone this repository, install and configure everything like you would have for a simple CuckooSandbox.
+
 2. Install a machine that can run [PINDemonium](https://github.com/Seba0691/PINdemonium) with all dependencies.
+
 3. Upload the file PINSandbox/PINAgent/Agent.py to the PIN machine, run it and take a snapshot. (You can configure IP, port and timeout of the unpacking in it)
+
 4. Almost everything that is used for PINSandbox is in PINSandbox/lib/cuckoo/unpacker/ . 
+
 5. Modify variables in PINSandbox/lib/cuckoo/unpacker/VM_Host.py (VM_Name, VB_Manager_PATH, VM_IP, VM_PORT, MACHINE_START_TIMEOUT)
+
 6. Send your file to cuckoo sandbox using  PINSandbox/utils/submit.py (it is a modified version)
+
 7. You can either force PINDemonium to be un by specifying "--PIN" or let the tool determine if the file needs unpacking (Entropy > 7.5)
+
+
+## Simple Demo
+### Submit
+<script type="text/javascript" src="https://asciinema.org/a/896b7k2fktbe9lylyvk3kvd6e.js" id="asciicast-896b7k2fktbe9lylyvk3kvd6e" async></script>
+### Cuckoo
+(Video is a bit long since unpacking process takes time)
+<script type="text/javascript" src="https://asciinema.org/a/ddqf3sh88lc32ngm8sf8d0vj7.js" id="asciicast-ddqf3sh88lc32ngm8sf8d0vj7" async></script>
