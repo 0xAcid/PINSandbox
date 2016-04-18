@@ -38,7 +38,7 @@ PINSandbox is a Cuckoo Sandbox mod which integrates [PINDemonium](https://github
 
 ## Simple Demo
 ### Submit
-<script type="text/javascript" src="https://asciinema.org/a/896b7k2fktbe9lylyvk3kvd6e.js" id="asciicast-896b7k2fktbe9lylyvk3kvd6e" async></script>
+[![asciicast](https://asciinema.org/a/896b7k2fktbe9lylyvk3kvd6e.png)](https://asciinema.org/a/896b7k2fktbe9lylyvk3kvd6e)
 ### Cuckoo
 (Video is a bit long since unpacking process takes time)
-<script type="text/javascript" src="https://asciinema.org/a/ddqf3sh88lc32ngm8sf8d0vj7.js" id="asciicast-ddqf3sh88lc32ngm8sf8d0vj7" async></script>
+[![asciicast](https://asciinema.org/a/ddqf3sh88lc32ngm8sf8d0vj7.png)](https://asciinema.org/a/ddqf3sh88lc32ngm8sf8d0vj7)
